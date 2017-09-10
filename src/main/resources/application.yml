@@ -1,0 +1,26 @@
+spring:
+ jpa:
+  hibernate:
+   ddl-auto: update
+ datasource:
+  url: jdbc:mysql://localhost:3306/posts
+  username: root
+  password: root
+  driver-class-name: com.mysql.jdbc.Driver
+ h2:
+   console:
+     enabled: true
+     path: /console
+
+auth:
+ header: Authorization
+ secret: mySecret
+ expiration: 604800
+ route:
+   authentication:
+    path: auth
+
+cxf:
+ path: /cxf
+ jaxrs:
+  component-scan: true
